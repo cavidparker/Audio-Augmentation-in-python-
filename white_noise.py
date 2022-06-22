@@ -24,9 +24,10 @@ def add_white_noise(signal, noise_factor):
 
 # for single image
 def single_image():
-    signal, sr = librosa.load("scale.wav")
+    signal, sr = librosa.load("clap.wav")
     augmented_signal = add_white_noise(signal, 0.1)
     augmented_signal = signal + noise * noise_percentage_factor
+    sf.write("clap_augmented_audio.wav", augmented_signal, sr)
     return augmented_signal
 
 
