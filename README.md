@@ -9,3 +9,9 @@
 
 ### Do Slow and fast in your Audio
 - python time_stretch.py 
+
+### Pitch-shifting typically involves an STFT, the shift—usually of a magnitude spectrum along the frequency axis
+- python pitch_scale.py
+
+### Sound frequency gain
+- python random_gain.py
