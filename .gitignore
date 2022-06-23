@@ -1,2 +1,3 @@
-*.wav
-cow
+clap/*.wav
+cow/*.wav
+couput/clap/*.wav
