@@ -15,3 +15,6 @@
 
 ### Sound frequency gain
 - python random_gain.py
+
+### Sound Frequency low
+- python inverse_polarity.py
