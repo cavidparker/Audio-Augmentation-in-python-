@@ -3,4 +3,9 @@
 
 
 ## DATA AUGMENTATION USING WHITE NOISE
+
+### Add some Noise into your Audio
 - python white_noise.py
+
+### Do Slow and fast in your Audio
+- python time_stretch.py 

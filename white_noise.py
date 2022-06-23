@@ -4,6 +4,7 @@ import soundfile as sf
 import pathlib
 import tensorflow as tf
 
+# from helper import _plot_signal_and_augmented_signal
 
 DATAPATH = "clap"
 output_path = "output"
@@ -13,7 +14,9 @@ commands = commands
 filenames = tf.io.gfile.glob(str(data_dir) + '/*')
 # print(filenames)
 num_sample = len(filenames)
-print(num_sample)
+print("NUMBER OF FILE :", num_sample)
+
+# Added some noise:
 
 
 def add_white_noise(signal, noise_factor):
@@ -25,9 +28,10 @@ def add_white_noise(signal, noise_factor):
 # for single image
 def single_image():
     signal, sr = librosa.load("clap.wav")
+    # 0.1 = noise level(ex: 0.5 will be more high)
     augmented_signal = add_white_noise(signal, 0.1)
-    augmented_signal = signal + noise * noise_percentage_factor
     sf.write("clap_augmented_audio.wav", augmented_signal, sr)
+    print("DONE")
     return augmented_signal
 
 
