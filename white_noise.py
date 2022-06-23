@@ -42,7 +42,7 @@ def save_file():
         print(y)
         augmented_signal = add_white_noise(signal, 0.1)
         sf.write(output_path+"/"+y.split('.')
-                 [0]+"_augmented.wav", augmented_signal, sr)
+                 [0]+"_whitenoise_augmented.wav", augmented_signal, sr)
 
 
 if __name__ == '__main__':

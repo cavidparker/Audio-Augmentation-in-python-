@@ -33,7 +33,7 @@ def save_file():
         print(y)
         augmented_signal = time_stretch(signal, 0.5)
         sf.write(output_path+"/"+y.split('.')
-                 [0]+"_time_augmented.wav", augmented_signal, sr)
+                 [0]+"_time_stretch_augmented.wav", augmented_signal, sr)
 
 
 if __name__ == '__main__':

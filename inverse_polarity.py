@@ -34,7 +34,7 @@ def save_file():
         print(y)
         augmented_signal = inverse_polarity(signal)
         sf.write(output_path+"/"+y.split('.')
-                 [0]+"_inverse_polarity.wav", augmented_signal, sr)
+                 [0]+"_inverse_polarity_augmented.wav", augmented_signal, sr)
 
 
 if __name__ == '__main__':
