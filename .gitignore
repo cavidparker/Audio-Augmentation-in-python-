@@ -1,3 +1,4 @@
 clap/*.wav
 cow/*.wav
-couput/clap/*.wav
+output/clap/*.wav
+*.wav
