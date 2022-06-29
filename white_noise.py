@@ -6,8 +6,8 @@ import tensorflow as tf
 
 # from helper import _plot_signal_and_augmented_signal
 
-DATAPATH = "clap"
-output_path = "output"
+DATAPATH = "cow3"
+output_path = "output3"
 data_dir = pathlib.Path(DATAPATH)
 commands = np.array(tf.io.gfile.listdir(str(data_dir)))
 commands = commands
@@ -27,10 +27,10 @@ def add_white_noise(signal, noise_factor):
 
 # for single image
 def single_image():
-    signal, sr = librosa.load("clap.wav")
+    signal, sr = librosa.load("test.wav")
     # 0.1 = noise level(ex: 0.5 will be more high)
-    augmented_signal = add_white_noise(signal, 0.1)
-    sf.write("clap_augmented_audio.wav", augmented_signal, sr)
+    augmented_signal = add_white_noise(signal, 0.2)
+    sf.write("white_noise_augmented_audio.wav", augmented_signal, sr)
     print("DONE")
     return augmented_signal
 
@@ -40,7 +40,7 @@ def save_file():
     for y in filenames:
         signal, sr = librosa.load(y)
         print(y)
-        augmented_signal = add_white_noise(signal, 0.1)
+        augmented_signal = add_white_noise(signal, 0.2)
         sf.write(output_path+"/"+y.split('.')
                  [0]+"_whitenoise_augmented.wav", augmented_signal, sr)
 

@@ -6,8 +6,8 @@ import tensorflow as tf
 import random
 
 
-DATAPATH = "clap"
-output_path = "output"
+DATAPATH = "cow3"
+output_path = "output3"
 data_dir = pathlib.Path(DATAPATH)
 # commands = np.array(tf.io.gfile.listdir(str(data_dir)))
 filenames = tf.io.gfile.glob(str(data_dir) + '/*')
@@ -16,7 +16,7 @@ print("NUMBER OF FILE :", len(filenames))
 
 
 def inverse_polarity(signal):
-    augmented_signal = signal * -0.5
+    augmented_signal = signal * -0.2
     return augmented_signal
 
 

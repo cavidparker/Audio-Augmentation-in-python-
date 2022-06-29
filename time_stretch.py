@@ -5,8 +5,8 @@ import pathlib
 import tensorflow as tf
 
 
-DATAPATH = "clap"
-output_path = "output"
+DATAPATH = "cow3"
+output_path = "output3"
 data_dir = pathlib.Path(DATAPATH)
 # commands = np.array(tf.io.gfile.listdir(str(data_dir)))
 filenames = tf.io.gfile.glob(str(data_dir) + '/*')
@@ -19,7 +19,7 @@ def time_stretch(signal, time_stretch_rate):
 
 
 def single_image():
-    signal, sr = librosa.load("cow.wav")
+    signal, sr = librosa.load("test.wav")
     # 0.5 means its slow the sound
     augmented_signal = time_stretch(signal, 0.5)
     sf.write("Augmented_time_stretch.wav", augmented_signal, sr)
